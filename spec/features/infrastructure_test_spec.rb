@@ -1,6 +1,8 @@
-describe Battle do
-  it 'shows confirmation message' do
-    visit "http://localhost:4567/"
+# Feature and scenario keywords are what define the testing framework for Capybara
+
+feature 'Testing infrastructure' do
+  scenario 'Can run app and check page content' do
+    visit('/')
     expect(page).to have_content('Testing infrastructure working!')
   end
 end
