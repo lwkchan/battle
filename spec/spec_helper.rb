@@ -16,7 +16,10 @@
 ENV['RACK_ENV'] = 'test'
 
 # This is requiring Sinatra app file for Capybara to work on it
+# This is the same as -> require './app', but it 'constructs' the file path
+# So it can locate the app file from any different folder
 require File.join(File.dirname(__FILE__), '..', 'app.rb')
+
 require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
