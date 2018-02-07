@@ -15,4 +15,10 @@ feature "hit points" do
     expect(page).to have_content("Josue attacks Hannah")
   end
 
+  scenario "player 2's HP reduces when attacked" do
+    sign_in_and_play
+    click_button('Attack player 2')
+    expect(page).to have_content("Hannah lost 10 HP. #{Player::MAX_HP - 10}HP remaining")
+  end
+
 end
