@@ -1,12 +1,12 @@
 feature "hit points" do
   scenario "player 1 can see player 2's hit points" do
     sign_in_and_play
-    expect(page).to have_content("Hannah has #{Battle::MAX_HP} HP.")
+    expect(page).to have_content("Hannah has #{Player::MAX_HP} HP.")
   end
 
   scenario "player 2 can see player 1's hit points" do
     sign_in_and_play
-    expect(page).to have_content("Josue has #{Battle::MAX_HP} HP.")
+    expect(page).to have_content("Josue has #{Player::MAX_HP} HP.")
   end
 
   scenario 'player 1 can attack player 2' do
