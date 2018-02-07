@@ -2,6 +2,8 @@ require 'sinatra/base'
 
 class Battle < Sinatra::Base
 
+  MAX_HP = 100
+
   enable :sessions
 
   get '/' do
@@ -10,10 +12,7 @@ class Battle < Sinatra::Base
 
   post '/names' do
     session[:player_1] = params[:player_1]
-    p session[:player_1]
-
     session[:player_2] = params[:player_2]
-    p session[:player_2]
     redirect to('/play')
   end
 
