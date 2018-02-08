@@ -24,7 +24,6 @@ describe Player do
 
   describe 'when attacked' do
     it 'loses 10 HP' do
-      player1.attack(player2)
       expect { player2.damage }.to change { player2.hit_points }.by(-Player::DEFAULT_DAMAGE)
     end
   end
