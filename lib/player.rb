@@ -10,10 +10,6 @@ class Player
     @hit_points = MAX_HP
   end
 
-  def attack(player)
-    player.damage
-  end
-
   def damage
     @hit_points -= DEFAULT_DAMAGE
   end
