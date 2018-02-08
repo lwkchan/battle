@@ -23,14 +23,24 @@ class Battle < Sinatra::Base
   get '/play' do
     @player_1 = $game.player_1
     @player_2 = $game.player_2
+    # player 1's turn = true
     erb(:players)
   end
 
+    # rename to /attack
+    # player_1's turn = true
+    # attacker = @player_1
+    # defender = @player_2
+    #
+    # player_1's turn = false
+    # attacker = @player_2
+    # defender = @player_1
   post '/player_1_attacks' do
     @player_1 = $game.player_1
     @player_2 = $game.player_2
     $game.attack(@player_2)
     erb(:player_1_attacks)
+    # player 1's turn = false
   end
 
   post '/player_2_attacks' do
