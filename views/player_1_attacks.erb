@@ -1,3 +1,7 @@
 <%= @player_1.name %> attacks <%= @player_2.name %><br>
 
 <%= @player_2.name %> lost <%=Player::DEFAULT_DAMAGE%>HP. <%=@player_2.hit_points %>HP remaining</p>
+
+<form action="/player_2_attacks" method="post">
+  <input type="submit" value="Attack player 1">
+</form>
